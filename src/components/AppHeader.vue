@@ -43,8 +43,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../style.scss";
+
 header {
-    background-color: #fff;
+    background-color: white;
     color: black;
 
     .container {
@@ -84,8 +86,8 @@ header {
 
                 li.active {
                     border-top: transparent solid 5px;
-                    border-bottom: #0282F9 solid 5px;
-                    color: #0282F9;
+                    border-bottom: $primary solid 5px;
+                    color: $primary;
                 }
             }
         }

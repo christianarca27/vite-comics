@@ -39,8 +39,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../style.scss";
+
 #container-wrapper {
-    background-color: #303030;
+    background-color: $secondary;
 
     .container {
         height: 110px;
@@ -51,16 +53,16 @@ export default {
 
         #container-inner-left {
             button {
-                background-color: #303030;
+                background-color: $secondary;
                 padding: .7rem;
-                border: #0282F9 solid 2px;
+                border: $primary solid 2px;
 
                 color: white;
                 cursor: pointer;
-            }
 
-            button:hover {
-                background-color: #505050;
+                &:hover {
+                    background-color: lighten($color: $secondary, $amount: 20%);
+                }
             }
         }
 
@@ -70,7 +72,7 @@ export default {
             gap: 1rem;
 
             strong {
-                color: #0282F9;
+                color: $primary;
             }
         }
     }

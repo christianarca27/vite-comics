@@ -23,6 +23,10 @@ export default {
 #card {
     width: calc(100% / 6 - 30px * 5 / 6);
 
+    &:hover {
+        cursor: pointer;
+    }
+
     img {
         width: 100%;
         aspect-ratio: 1;
@@ -34,6 +38,7 @@ export default {
 
     p {
         text-transform: uppercase;
+        text-align: start;
     }
 }
 </style>

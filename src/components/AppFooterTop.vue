@@ -43,6 +43,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../style.scss";
+
 #container-wrapper {
     background-color: #0282F9;
     height: 150px;

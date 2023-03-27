@@ -16,8 +16,12 @@ export default {
     <main>
         <div id="jumbo"></div>
 
-        <div id="card-container">
-            <AppCard v-for="comic in comics" :img="comic.thumb" :title="comic.series"></AppCard>
+        <div class="container">
+            <h2 id="content-description">Current Series</h2>
+
+            <div id="card-container">
+                <AppCard v-for="comic in comics" :img="comic.thumb" :title="comic.series"></AppCard>
+            </div>
         </div>
 
         <button>Load more</button>
@@ -25,11 +29,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../style.scss";
+
 main {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 3rem;
+    text-align: center;
 
     #jumbo {
         width: 100%;
@@ -38,24 +41,46 @@ main {
         background-size: cover;
     }
 
-    #card-container {
-        max-width: 1200px;
-        width: 100%;
+    .container {
+        position: relative;
 
-        display: flex;
-        flex-flow: row wrap;
-        gap: 30px;
+        #content-description {
+            background-color: $primary;
+            padding: .5rem 1.5rem;
+
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            transform: translateY(-50%);
+
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        #card-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            display: flex;
+            flex-flow: row wrap;
+            gap: 30px;
+        }
     }
 
     button {
-        background-color: #0282F9;
+        background-color: $primary;
         margin-bottom: 1rem;
         padding: .5rem 3rem;
 
         color: white;
-        // font-size: 1.2rem;
         font-weight: bold;
         text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $primary, $amount: 20%);
+        }
     }
 }
 </style>
