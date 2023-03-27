@@ -14,7 +14,7 @@ export default {
                 "news",
                 "shop"
             ],
-            activeIndex: 0,
+            activeIndex: 1,
         }
     },
     methods: {
