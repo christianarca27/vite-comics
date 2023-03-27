@@ -1,6 +1,17 @@
 $primary: #0282F9;
 $secondary: #303030;
 
+@mixin create-button($bg-color, $tx-color) {
+  background-color: $bg-color;
+  color: $tx-color;
+  border: 2px solid $primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color: $bg-color, $amount: 20%);
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

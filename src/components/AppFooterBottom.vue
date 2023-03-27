@@ -53,16 +53,9 @@ export default {
 
         #container-inner-left {
             button {
-                background-color: $secondary;
+                @include create-button($secondary, white);
+
                 padding: .7rem;
-                border: $primary solid 2px;
-
-                color: white;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: lighten($color: $secondary, $amount: 20%);
-                }
             }
         }
 

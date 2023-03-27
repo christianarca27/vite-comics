@@ -69,18 +69,13 @@ main {
     }
 
     button {
-        background-color: $primary;
+        @include create-button($primary, white);
+
         margin-bottom: 1rem;
         padding: .5rem 3rem;
 
-        color: white;
         font-weight: bold;
         text-transform: uppercase;
-
-        &:hover {
-            cursor: pointer;
-            background-color: lighten($color: $primary, $amount: 20%);
-        }
     }
 }
 </style>
