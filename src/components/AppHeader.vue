@@ -34,8 +34,9 @@ export default {
 
             <div id="links">
                 <ul>
-                    <li v-for="(link, index) in links" @click="changeActiveLink(index)"
-                        :class="activeIndex == index ? 'active' : ''">{{ link }}</li>
+                    <li v-for="(link, index) in links" :class="activeIndex == index ? 'active' : ''">
+                        <a href="#" @click="changeActiveLink(index)">{{ link }}</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -43,7 +44,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../style.scss";
+@use "../style.scss" as *;
 
 header {
     background-color: white;
@@ -81,13 +82,15 @@ header {
                     display: flex;
                     align-items: center;
 
-                    cursor: pointer;
-                }
+                    a {
+                        color: black;
+                    }
 
-                li.active {
-                    border-top: transparent solid 5px;
-                    border-bottom: $primary solid 5px;
-                    color: $primary;
+                    &.active {
+                        border-top: transparent solid 5px;
+                        border-bottom: $primary solid 5px;
+                        color: $primary;
+                    }
                 }
             }
         }

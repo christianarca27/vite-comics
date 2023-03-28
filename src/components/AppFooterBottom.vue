@@ -39,7 +39,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../style.scss";
+@use "../style.scss" as *;
 
 #container-wrapper {
     background-color: $secondary;

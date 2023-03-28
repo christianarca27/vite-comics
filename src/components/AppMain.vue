@@ -29,7 +29,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../style.scss";
+@use "../style.scss" as *;
 
 main {
     text-align: center;
